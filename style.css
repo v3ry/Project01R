@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 200px;
+}
+header{
+    width: 100%;
+    position: relative;
+}
+.mainImg{
+    width: 100%;
+    height: 150px;
+    object-fit:cover;
+}
+.buttonBlock{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+
+}
+.button{
+    position: relative;
+    margin: 0.5rem;
+    
+}
+.button img{
+    position: relative;
+    width:177px;
+    height: 63px;
+    border-radius: 11px;
+    border: 1px solid black;
+}
+.button h2{
+    position: relative;
+    top: -50%;
+    left: 0%;
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 24px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+#bAccueil{
+    color: red;
+}
+#bSucree{
+    color: blue;
+}
+#bSalee{
+    color: brown;
+}
+#bContact{
+    color: aqua;
+}

@@ -15,6 +15,17 @@ header{
     height: 150px;
     object-fit:cover;
 }
+#mainTitle{
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    color:burlywood;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:darkorange;
+}
 .buttonBlock{
     display: flex;
     justify-content: space-around;
@@ -48,7 +59,7 @@ header{
     align-items: center;
     text-align: center;
     -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: black;
 }
 #bAccueil{
     color: red;

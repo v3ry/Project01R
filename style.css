@@ -8,10 +8,9 @@ body{
     width: 100%;
     background-size: contain;
     height:max-content;
-    background-repeat: no-repeat;
+    background-repeat:repeat;
     padding-bottom: 60px;
     margin-top: 200px;
-    background-position: center 85%;
 }
 img{
     width: 200px;
@@ -130,4 +129,26 @@ footer p{
 footer img{
     height: 50px;
     object-fit:contain;
+}
+
+/*Pagggggggggeee Contact*/
+form{
+    margin: 2rem;
+}
+form label{
+    margin: 2rem 0rem 1rem 2rem;
+    font-weight: bolder;
+}
+form input{
+    width: 70%;
+    height: 2rem;
+    margin: 1rem;
+    border-radius: 11px;
+}
+#fmessage{
+    height: 7rem;
+}
+#bSend{
+    width: 4rem;
+    margin: 0 50%;
 }

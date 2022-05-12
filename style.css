@@ -6,7 +6,7 @@
 body{
     background-image:url(./imgs/pexels-dmitry-zvolskiy-2062426.jpg);
     width: 100%;
-    background-size: contain;
+    background-size: cover;
     height:max-content;
     background-repeat:repeat;
     padding-bottom: 60px;

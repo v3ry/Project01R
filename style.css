@@ -19,6 +19,7 @@ header{
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 2;
 }
 .mainImg{
     width: 100%;
@@ -90,7 +91,7 @@ header{
 }
 
 main{
-    margin: 1rem 20%;
+    margin: 1rem 10%;
     background-color: rgba(250, 235, 215,0.7);
     border-radius: 11px;
     padding: 2rem;
@@ -119,6 +120,7 @@ footer{
     border-top: 2px solid white;
     position: fixed;
     bottom: 0;
+    z-index: 2;
 }
 footer p{
     margin-left: 1rem;
@@ -130,6 +132,68 @@ footer img{
     height: 50px;
     object-fit:contain;
 }
+
+/*Pagggggggggeee Sucrée*/
+.zoneRecettes{
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: repeat(1fr , 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: 300px 100px; */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    height: fit-content;
+}
+
+.recettePreview{
+    display: inline-flex;
+    background-color:bisque;
+    border-radius: 11px;
+    padding: 1rem;
+    margin: 1rem;
+    width: fit-content;
+    height: fit-content;
+}
+.recettePreview h3, .recettePreview ul{
+    margin: 1rem;
+    margin-left: 2rem;
+}
+.recettePreview img{
+    width: 150px;
+    height: 100px;
+    image-rendering: pixelated;
+    border-radius: 11px;
+}
+.preview{
+    display: inline-flex;
+}
+.zoneTextPreview{
+    display: block;
+}
+
+
+.recetteFull{
+    display: none;
+}
+.displayRecette{
+    display: block;
+    width: 480px;
+    height: 500px;
+    height: fit-content;
+    z-index: 1;
+}
+.displayText{
+    display: block;
+}
+.displayRecette p,.recettePreview h3,.recettePreview ol li,.recetteFull.displayRecette{
+    pointer-events:none;
+}
+
 
 /*Pagggggggggeee Contact*/
 form{

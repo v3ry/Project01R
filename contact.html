@@ -31,15 +31,18 @@
     </header>
     <main>
         <h1>Contact</h1>
-        <form action="">
+        <form id="contact-form"
+        method="POST"
+        action="http://82.65.82.1:5000/send"
+        enctype="multipart/form-data">
             <label for="fname">Nom/Pseudo:</label><br>
-            <input type="text" name="fname" id="fname"><br>
+            <input type="text" name="name" id="name"><br>
             <label for="fmail">Mail:</label><br>
-            <input type="text" name="fmail" id="fmail"><br>
+            <input type="text" name="email" id="email"><br>
             <label for="fsujet">Sujet:</label><br>
-            <input type="text" name="fsujet" id="fsujet"><br>
+            <input type="text" name="subject" id="subject"><br>
             <label for="fmessage">Message:</label><br>
-            <input type="text" name="fmessage" id="fmessage"><br>
+            <input type="text" name="message" id="message"><br>
             <input type="submit" value="Envoyer" id="bSend">
         </form>
     </main>
@@ -48,5 +51,6 @@
         <img src="./imgs/discord.png" alt="liens discord">
         <img src="./imgs/logo.png" alt="logo v3ry3D">
     </footer>
+    
 </body>
 </html>

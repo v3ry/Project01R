@@ -1,5 +1,5 @@
 const recettePreview = document.querySelectorAll(".recettePreview");
-const recetteFull = document.querySelectorAll(".recetteFull");
+// const recetteFull = document.querySelectorAll(".recetteFull");
 console.log(recettePreview)
 let bAppear = false;
 // for(i = 0; i < recettePreview.length;i++){

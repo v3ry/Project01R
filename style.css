@@ -133,12 +133,11 @@ footer img{
     object-fit:contain;
 }
 
-/*Pagggggggggeee Sucrée*/
+/*Pagggggggggeee Sucrée Saléem*/
 ul li{
     white-space: pre-wrap;
 }
 .zoneRecettes{
-    
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
     gap: 30px;

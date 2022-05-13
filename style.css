@@ -135,7 +135,7 @@ footer img{
 
 /*Pagggggggggeee Sucrée*/
 ul li{
-    white-space: pre;
+    white-space: pre-wrap;
 }
 .zoneRecettes{
     

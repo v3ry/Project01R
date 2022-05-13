@@ -182,6 +182,9 @@ ul li{
 .recetteFull{
     display: none;
 }
+.displayRecette ol{
+    padding: 0.5rem;
+}
 .displayRecette{
     display: block;
     width: fit-content;/*480px */

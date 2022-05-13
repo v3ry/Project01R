@@ -159,12 +159,17 @@ ul li{
 .recettePreview h3, .recettePreview ul{
     margin: 1rem;
     margin-left: 2rem;
+    
+}
+.recettePreview h3{
+    text-align: center;
 }
 .recettePreview img{
     width: 150px;
-    height: 100px;
+    height: 125px;
     image-rendering: pixelated;
     border-radius: 11px;
+    align-self: center;
 }
 .preview{
     display: inline-flex;

@@ -224,8 +224,9 @@ form label{
     margin: 2rem 0rem 1rem 2rem;
     font-weight: bolder;
 }
-form input{
-    width: 70%;
+form input,textarea{
+    padding: 4px;
+    width: 80%;
     height: 2rem;
     margin: 1rem;
     border-radius: 11px;

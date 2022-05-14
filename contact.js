@@ -11,19 +11,15 @@ const sendMail = (mail) => {
     method: "post",
     body: mail,
   }).then((response) => {
-    console.log(response);
     if(response.status === 200){
-      console.log("succes");
       sendNotif("green","Message envoyé, merci");
     }else{
-      console.log("fail coté serveur");
       sendNotif("red","Oups le serveur est cassé, désolé");
     }
     return response.status;
   })
   .catch((error) => {
-    console.log("Serveur HS");
-    sendNotif(false);
+    sendNotif("red","Oups le serveur est cassé, désolé");
   });
 };
 

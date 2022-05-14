@@ -1,24 +1,17 @@
 const recettePreview = document.querySelectorAll(".recettePreview");
-// const recetteFull = document.querySelectorAll(".recetteFull");
-console.log(recettePreview);
 let bAppear = false;
 let myId = 0;
 
 recettePreview.forEach(rec=>{
-    
-    console.log(myId);
     rec.setAttribute("ID",myId )
     window["bAppear"+myId] = false;
     myId++;
     rec.addEventListener("click",function handleClick(event) {
         let currentID = rec.getAttribute("ID");
-        console.log("Id is " + currentID);
         if (window["bAppear"+currentID] === false){
             rec.classList.add("displayRecette");
             let test = rec.lastElementChild;
-            console.log(test);
-            rec.lastElementChild.classList.remove("recetteFull")
-            console.log(rec)
+            rec.lastElementChild.classList.remove("recetteFull");
             window["bAppear"+currentID] = true;
         }else{
             rec.classList.remove("displayRecette");

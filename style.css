@@ -279,7 +279,7 @@ h1,h2,h3,p,#bAccueil,#bSucree,#bSalée,#bContact,li{
     }
     .recettePreview{
         display: block;
-        width: fit-content;
+        width: 300px;
     }
 }
 /*Anim Part*/

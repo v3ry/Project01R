@@ -1,14 +1,11 @@
 const form = document.getElementById("contact-form");
-
 const formEvent = form.addEventListener("submit", (event) => {
   event.preventDefault();
   let mail = new FormData(form);
-  
   sendMail(mail);
-
-
 });
 
+//envoie du form de contact
 const sendMail = (mail) => {
   fetch("http://82.65.82.1:5000/send", {
     method: "post",
@@ -16,22 +13,59 @@ const sendMail = (mail) => {
   }).then((response) => {
     console.log(response);
     if(response.status === 200){
-      console.log("succes")
+      console.log("succes");
+      sendNotif(true);
     }else{
       console.log("fail coté serveur");
+      sendNotif(false);
     }
     return response.status;
   })
   .catch((error) => {
-    console.log("Serveur HS")
+    console.log("Serveur HS");
+    sendNotif(false);
   });
 };
 
 //CreateAlert
-const alert = document.createElement("div")
-alert.style.width = "200px";
-alert.style.heigth = "100px"
-alert.style.backgroundcolor = "red"
-function sendNotif(isOk){
+const myAlert = document.createElement("div");
+const message = document.createElement("p")
+const currentDiv = document.querySelector("main");
 
+//myAlert style
+myAlert.style.width = "300px";
+myAlert.style.height = "80px";
+myAlert.style.backgroundColor = "red";
+myAlert.style.zIndex = "800";
+myAlert.style.position = "fixed";
+myAlert.style.top = "40%";
+myAlert.style.left = "30%"
+myAlert.style.borderRadius = "11px";
+myAlert.style.display = "none"
+myAlert.style.alignItems = "center"
+message.innerHTML = "Probleme d'envoie, merci de retenter plus tard.";
+message.style.color = "white";
+message.style.textAlign="center";
+message.style.fontWeight = "bolder"
+message.style.fontSize = "20px"
+myAlert.appendChild(message);
+currentDiv.appendChild(myAlert);
+
+//fonction de mise en pause
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+//Fonction génératrice de message pour un meilleur dry
+async function notifEdit(myColor, text){
+  myAlert.style.display = "flex"
+  myAlert.style.backgroundColor = myColor;
+  message.innerHTML = `${text} ${document.querySelector("#name").value}.`;
+  await sleep(5000);
+  myAlert.style.display = "none";
+}
+
+//Reception de la réponse du serveur
+function sendNotif(isOk){ 
+  isOk ===true?notifEdit("green","Message envoyé, merci"):notifEdit("red","Oups le serveur est cassé, désolé");
 }

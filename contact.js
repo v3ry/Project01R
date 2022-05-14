@@ -14,10 +14,10 @@ const sendMail = (mail) => {
     console.log(response);
     if(response.status === 200){
       console.log("succes");
-      sendNotif(true);
+      sendNotif("green","Message envoyé, merci");
     }else{
       console.log("fail coté serveur");
-      sendNotif(false);
+      sendNotif("red","Oups le serveur est cassé, désolé");
     }
     return response.status;
   })
@@ -57,15 +57,10 @@ function sleep(ms) {
 }
 
 //Fonction génératrice de message pour un meilleur dry
-async function notifEdit(myColor, text){
+async function sendNotif(myColor, text){
   myAlert.style.display = "flex"
   myAlert.style.backgroundColor = myColor;
   message.innerHTML = `${text} ${document.querySelector("#name").value}.`;
   await sleep(5000);
   myAlert.style.display = "none";
-}
-
-//Reception de la réponse du serveur
-function sendNotif(isOk){ 
-  isOk ===true?notifEdit("green","Message envoyé, merci"):notifEdit("red","Oups le serveur est cassé, désolé");
 }

@@ -252,25 +252,177 @@ h1,h2,h3,p,#bAccueil,#bSucree,#bSalée,#bContact,li{
         margin-top: 4.9rem;
         border: 1px solid black;
     }
-
     .hamburger{
         display: initial;
         position: fixed;
         top: 4rem;
         right: 1rem;
         z-index: 3;
-        /* width: 100px;
-        height: 100px;
-        z-index: 100; */
     }
     .hamburger img{
         width: 100px;
         height: 100px;
     }
+    
 }
-/* Correction d'un bug introduit par le menu burger */
-/* @media screen and (min-width: 700px) {
-    .buttonBlock{
-        display: flex;
+@media screen and (max-width: 600px) {
+    main{
+        margin: 0;
+        width: 100%;
     }
-} */
+    .zoneRecettes{
+        justify-content: space-around;
+    }
+    .preview{
+        display: flex;
+        flex-direction: column;
+    }
+    .recettePreview{
+        display: block;
+        width: fit-content;
+    }
+}
+/*Anim Part*/
+
+.glitchedAnim,
+.invisible-text {
+    position: fixed;
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  color:antiquewhite;
+}
+.glitchedAnim {
+  position: absolute;
+  top: 1.5rem;
+  opacity: 0.9;
+}
+.invisible-text {
+  visibility: hidden;
+}
+.glitchedAnim:nth-child(2) {
+  color: #f03e3e;
+  animation: skewAnim 3s infinite;
+}
+.glitchedAnim:nth-child(3) {
+  color: #3df0cf;
+  animation: glitchAnim2 3s infinite;
+}
+.glitchedAnim:nth-child(4) {
+  color: #f1f1f1;
+  animation: glitchAnim1 3s infinite;
+}
+.txt-info {
+  font-family: Open Sans, sans-serif;
+  color: #f1f1f1;
+  font-size: 20px;
+}
+@keyframes glitchAnim1 {
+  7% {
+    transform: none;
+  }
+  10% {
+    transform: translate(3px, -2px);
+  }
+  13% {
+    transform: none;
+  }
+  20% {
+    transform: none;
+  }
+  23% {
+    transform: translate(-6px, -7px);
+  }
+  26% {
+    transform: none;
+  }
+  40% {
+    transform: none;
+  }
+  43% {
+    transform: translate(5px, -9px);
+  }
+  46% {
+    transform: none;
+  }
+  65% {
+    transform: none;
+  }
+  68% {
+    transform: translate(7px, 5px);
+  }
+  71% {
+    transform: none;
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes glitchAnim2 {
+  7% {
+    transform: none;
+  }
+  10% {
+    transform: translate(-6px, 2px);
+  }
+  13% {
+    transform: none;
+  }
+  20% {
+    transform: none;
+  }
+  23% {
+    transform: translate(6px, 7px);
+  }
+  26% {
+    transform: none;
+  }
+  40% {
+    transform: none;
+  }
+  43% {
+    transform: translate(-5px, 9px);
+  }
+  46% {
+    transform: none;
+  }
+  65% {
+    transform: none;
+  }
+  68% {
+    transform: translate(-7px, 5px);
+  }
+  71% {
+    transform: none;
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes skewAnim {
+  20% {
+    transform: none;
+  }
+  23% {
+    transform: skew(5deg, -5deg) translate(10px, 5px);
+  }
+  26% {
+    transform: none;
+  }
+  40% {
+    transform: none;
+  }
+  43% {
+    transform: skew(5deg, -10deg) translate(-5px, 2px);
+  }
+  46% {
+    transform: none;
+  }
+  100% {
+    transform: none;
+  }
+}

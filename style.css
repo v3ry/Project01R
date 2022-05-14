@@ -222,6 +222,13 @@ form input{
     width: 4rem;
     margin: 0 50%;
 }
+
+h1,h2,h3,p,#bAccueil,#bSucree,#bSalée,#bContact,li{
+    font-family: "Roboto", sans-serif;
+}
+
+
+
 /*Burger Menu*/
 
 .hamburger{

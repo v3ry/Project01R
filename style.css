@@ -49,7 +49,7 @@ header{
 .button{
     position: relative;
     margin: 0.5rem;
-    
+    height: 60px;
 }
 .button img{
     position: relative;
@@ -63,7 +63,7 @@ header{
 }
 .button h2{
     position: relative;
-    top: -50%;
+    top: -80%;
     left: 0%;
     color: white;
     font-family: 'Inter';
@@ -219,4 +219,40 @@ form input{
 #submit{
     width: 4rem;
     margin: 0 50%;
+}
+/*Burger Menu*/
+
+.hamburger{
+    display: none;
+}
+
+/* Responsive Part */
+
+@media screen and (max-width: 700px) {
+    .buttonBlock{
+        width:fit-content;
+        background-color: cornsilk;
+        display: none;
+        flex-wrap: wrap;
+        align-content: space-around;
+        border-radius: 11px;
+        margin: 2rem;
+        margin-top: 4.9rem;
+        border: 1px solid black;
+    }
+
+    .hamburger{
+        display: initial;
+        position: fixed;
+        top: 4rem;
+        right: 1rem;
+        z-index: 3;
+        /* width: 100px;
+        height: 100px;
+        z-index: 100; */
+    }
+    .hamburger img{
+        width: 100px;
+        height: 100px;
+    }
 }

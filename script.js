@@ -2,11 +2,8 @@ const recettePreview = document.querySelectorAll(".recettePreview");
 // const recetteFull = document.querySelectorAll(".recetteFull");
 console.log(recettePreview);
 let bAppear = false;
-// for(i = 0; i < recettePreview.length;i++){
-// recettePreview[i].addEventListener("click", fullRecette(i));
-// recetteFull[i].addEventListener("click", fullRecette(i));
-// }
 let myId = 0;
+
 recettePreview.forEach(rec=>{
     
     console.log(myId);
@@ -25,19 +22,22 @@ recettePreview.forEach(rec=>{
             window["bAppear"+currentID] = true;
         }else{
             rec.classList.remove("displayRecette");
-            rec.lastElementChild.classList.add("recetteFull")
+            rec.lastElementChild.classList.add("recetteFull");
             window["bAppear"+currentID] = false;
 }})});
 
 
-// function fullRecette(id){
-//     if (bAppear === false){
-//     recetteFull[id].classList.add("displayRecette");
-//     bAppear = true;
-//     console.log(id)
-// }else{
-//     recetteFull[id].classList.remove("displayRecette");
-//     bAppear = false;
-//     console.log(id)
-// }
-// }
+//ZoneBoutonBurger
+const btnBurger = document.querySelector(".hamburger");
+const btnBlock = document.querySelector(".buttonBlock");
+let burgerOpen = false;
+
+btnBurger.addEventListener("click",function handleClick(event){
+    if (burgerOpen === false){
+        btnBlock.style.display = "flex";
+        burgerOpen = true;
+    }else{
+        btnBlock.style.display = "none";
+        burgerOpen = false;
+    }
+})

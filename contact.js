@@ -26,3 +26,12 @@ const sendMail = (mail) => {
     console.log("Serveur HS")
   });
 };
+
+//CreateAlert
+const alert = document.createElement("div")
+alert.style.width = "200px";
+alert.style.heigth = "100px"
+alert.style.backgroundcolor = "red"
+function sendNotif(isOk){
+
+}

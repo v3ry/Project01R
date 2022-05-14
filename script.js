@@ -40,4 +40,21 @@ btnBurger.addEventListener("click",function handleClick(event){
         btnBlock.style.display = "none";
         burgerOpen = false;
     }
-})
+});
+
+//correction d'affichage du menu en cas d'utilisation du burger
+const smallDevice = window.matchMedia("(min-width: 700px)");
+smallDevice.addEventListener("change",handleDeviceChange);
+
+function handleDeviceChange(e) {
+  if (e.matches){ 
+      btnBlock.style.display = "flex";
+      burgerOpen = true;
+    }else{
+      btnBlock.style.display = "none";
+      burgerOpen = false;
+    }
+}
+
+// Run it initially
+handleDeviceChange(smallDevice);

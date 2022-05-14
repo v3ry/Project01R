@@ -256,3 +256,9 @@ form input{
         height: 100px;
     }
 }
+/* Correction d'un bug introduit par le menu burger */
+/* @media screen and (min-width: 700px) {
+    .buttonBlock{
+        display: flex;
+    }
+} */

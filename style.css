@@ -17,6 +17,9 @@ body{
 img{
     width: 200px;
 }
+/*
+zone Header
+*/
 header{
     width: 100%;
     position: fixed;
@@ -38,8 +41,6 @@ header{
     width: 100%;
     color:antiquewhite;
     text-shadow: #FC0 1px 0 10px;
-    /* -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color:darkorange; */
 }
 .buttonBlock{
     display: flex;
@@ -74,8 +75,6 @@ header{
     line-height: 24px;
     align-items: center;
     text-align: center;
-    /* -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black; */
     pointer-events:none;
 }
 #bAccueil{
@@ -94,10 +93,12 @@ header{
     color: black;
     text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em white;    
 }
-
+/*
+Zone Main
+*/
 main{
     margin: 1rem 10%;
-    background-color: rgba(250, 235, 215,0.7);
+    background-color: rgba(250, 235, 215,0.8);
     border-radius: 11px;
     padding: 2rem;
 }
@@ -109,7 +110,9 @@ main h1{
 main h2{
     margin: 2rem 1rem 1rem 1rem;
 }
-
+/*
+Zone Footer
+*/
 footer{
     background-color: rgb(193, 158, 128);
     width: 100%;
@@ -137,8 +140,16 @@ footer img{
     height: 50px;
     object-fit:contain;
 }
-
-/*Pagggggggggeee Sucrée Saléem*/
+p{
+    font-size: 20px;
+}
+h4{
+    margin: 1rem;
+    font-size: 20px;
+}
+/*
+Page Sucré Salé
+*/
 ul li{
     white-space: pre-wrap;
 }
@@ -182,7 +193,6 @@ ul li{
     display: block;
 }
 
-
 .recetteFull{
     display: none;
 }
@@ -204,7 +214,9 @@ ul li{
 }
 
 
-/*Pagggggggggeee Contact*/
+/*
+Page Contact
+*/
 form{
     margin: 2rem;
 }
@@ -226,19 +238,21 @@ form input{
     margin: 0 50%;
 }
 
-h1,h2,h3,p,#bAccueil,#bSucree,#bSalée,#bContact,li{
-    font-family: "Roboto", sans-serif;
+h1,h2,h3,h4,p,#bAccueil,#bSucree,#bSalée,#bContact,li{
+    /* font-family: "Roboto", sans-serif; */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-
-/*Burger Menu*/
-
+/*
+Burger Menu
+*/
 .hamburger{
     display: none;
 }
 
-/* Responsive Part */
+/*
+Zone Responsive 
+*/
 
 @media screen and (max-width: 700px) {
     .buttonBlock{
@@ -262,9 +276,9 @@ h1,h2,h3,p,#bAccueil,#bSucree,#bSalée,#bContact,li{
     .hamburger img{
         width: 100px;
         height: 100px;
-    }
-    
+    }  
 }
+
 @media screen and (max-width: 600px) {
     main{
         margin: 0;
@@ -281,9 +295,17 @@ h1,h2,h3,p,#bAccueil,#bSucree,#bSalée,#bContact,li{
         display: block;
         width: 300px;
     }
+    footer p{
+        font-size: 1rem;
+    }
+    footer img{
+        width: 120px;
+    }
 }
-/*Anim Part*/
 
+/*
+Anim Part
+*/
 .glitchedAnim,
 .invisible-text {
     position: fixed;

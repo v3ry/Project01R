@@ -36,9 +36,10 @@ header{
     align-items: center;
     text-align: center;
     width: 100%;
-    color:white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color:darkorange;
+    color:antiquewhite;
+    text-shadow: #FC0 1px 0 10px;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:darkorange; */
 }
 .buttonBlock{
     display: flex;
@@ -67,29 +68,31 @@ header{
     position: relative;
     top: -80%;
     left: 0%;
-    color: white;
-    font-family: 'Inter';
     font-style: normal;
-    font-weight: bolder;
-    font-size: 24px;
+    font-weight: bold;
+    font-size: 30px;
     line-height: 24px;
     align-items: center;
     text-align: center;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black; */
     pointer-events:none;
 }
 #bAccueil{
-    color: red;
+    color: black;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em white;
 }
 #bSucree{
-    color: blue;
+    color:gold;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 #bSalee{
-    color: brown;
+    color:rgb(169, 255, 226);
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 #bContact{
-    color: aqua;
+    color: black;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em white;    
 }
 
 main{

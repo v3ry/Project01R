@@ -37,14 +37,14 @@
         <form id="contact-form"
         method="POST"
         enctype="multipart/form-data">
-            <label for="fname">Nom/Pseudo:</label><br>
+            <label id="fname">Nom/Pseudo:</label><br>
             <input type="text" name="name" id="name" required><br>
-            <label for="fmail">Mail:</label><br>
+            <label id="fmail">Mail:</label><br>
             <input type="email" name="email" id="email" required><br>
-            <label for="fsujet">Sujet:</label><br>
+            <label id="fsujet">Sujet:</label><br>
             <input type="text" name="subject" id="subject" required><br>
-            <label for="fmessage">Message:</label><br>
-            <textarea type="text" name="message" id="message" rows="3" required></textarea><br>
+            <label id="fmessage">Message:</label><br>
+            <textarea name="message" id="message" rows="3" required></textarea><br>
             <input type="submit" value="Envoyer" id="bSend">
         </form>
     </main>

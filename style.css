@@ -267,6 +267,9 @@ Zone Responsive
         margin-top: 4.9rem;
         border: 1px solid black;
     }
+    .displayRecette{
+      width: 100%;
+    }
     .hamburger{
         display: initial;
         position: fixed;
@@ -295,7 +298,7 @@ Zone Responsive
     }
     .recettePreview{
         display: block;
-        width: 300px;
+        /*width: 300px;*/
     }
     footer p{
         font-size: 1rem;

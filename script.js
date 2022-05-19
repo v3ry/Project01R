@@ -1,21 +1,20 @@
 const recettePreview = document.querySelectorAll(".recettePreview");
-let bAppear = false;
-let myId = 0;
+let myId = 0; //défini une valeur id
 
-recettePreview.forEach(rec=>{
-    rec.setAttribute("ID",myId )
-    window["bAppear"+myId] = false;
+recettePreview.forEach(rec=>{   //Boucle dans les previews
+    rec.setAttribute("ID",myId ) //ajoute l'attribut ID a chaque élément
+    window["bAppear"+myId] = false; //creation de boulean avec ID
     myId++;
     rec.addEventListener("click",function handleClick(event) {
-        let currentID = rec.getAttribute("ID");
+        let currentID = rec.getAttribute("ID");//récupere l'id de l'element
         if (window["bAppear"+currentID] === false){
             rec.classList.add("displayRecette");
-            let test = rec.lastElementChild;
-            rec.lastElementChild.classList.remove("recetteFull");
-            window["bAppear"+currentID] = true;
+            let test = rec.lastElementChild; //recupère le dernier enfant de displayRecette
+            rec.lastElementChild.classList.remove("recetteFull"); //enlevement de la classe cachant le texte
+            window["bAppear"+currentID] = true; //défini la boulean spécifique sur true
         }else{
-            rec.classList.remove("displayRecette");
-            rec.lastElementChild.classList.add("recetteFull");
+            rec.classList.remove("displayRecette"); //enlevement de l'affichage complet
+            rec.lastElementChild.classList.add("recetteFull"); //recacher le texte
             window["bAppear"+currentID] = false;
 }})});
 
